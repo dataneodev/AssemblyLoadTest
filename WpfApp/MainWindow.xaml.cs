@@ -1,7 +1,5 @@
-﻿using LibTest;
-using System;
+﻿using ClassLibrary;
 using System.Windows;
-using Tekla.Structures.Model;
 
 namespace WpfApp
 {
@@ -13,17 +11,7 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
-            tbMain.Text = new ModelTest().GetTest();
-
-            try
-            {
-                var model = new Model().GetProjectInfo();
-            }
-            catch (Exception e)
-            {
-
-            }
-
+            tbMain.Text = new ClassLibTest().Test();
         }
     }
 }

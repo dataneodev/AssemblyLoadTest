@@ -21,6 +21,9 @@ namespace WpfApp
 
         static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
+            if (args.Name.StartsWith("ClassLibrary"))
+                return Assembly.LoadFrom(@"dll\ClassLibrary.dll");
+
             if (args.Name.StartsWith("LibTest"))
                 return Assembly.LoadFrom(Path.Combine("dll", GetLibVersion(), "LibTest.dll"));
 

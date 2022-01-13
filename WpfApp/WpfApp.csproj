@@ -35,11 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LibTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\V1\LibTest.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -50,35 +45,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\V1\Tekla.Structures.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tekla.Structures.Catalogs, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\V1\Tekla.Structures.Catalogs.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tekla.Structures.Dialog.Data">
-      <HintPath>dll\V1\Tekla.Structures.Dialog.Data.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tekla.Structures.Drawing, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\V1\Tekla.Structures.Drawing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\V1\Tekla.Structures.Model.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tekla.Structures.Plugins, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\V1\Tekla.Structures.Plugins.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -137,6 +103,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dll\ClassLibrary.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="dll\V1\LibTest.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -179,6 +148,13 @@
     <Content Include="dll\V2\Tekla.Structures.Plugins.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{7bd56a92-9ec4-4938-bc20-1daf8d18a127}</Project>
+      <Name>ClassLibrary</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
