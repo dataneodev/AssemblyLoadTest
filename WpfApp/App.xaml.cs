@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace WpfApp
@@ -25,7 +20,21 @@ namespace WpfApp
         }
 
         static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
-            => Assembly.LoadFrom(Path.Combine("dll", GetLibVersion(), "LibTest.dll"));
+        {
+            if (args.Name.StartsWith("LibTest"))
+                return Assembly.LoadFrom(Path.Combine("dll", GetLibVersion(), "LibTest.dll"));
+
+            if (args.Name.StartsWith("Tekla"))
+            {
+                string shortName = new AssemblyName(args.Name).Name;
+
+                var dllPath = Path.Combine("dll", GetLibVersion(), $"{shortName}.dll");
+                if (File.Exists(dllPath))
+                    return Assembly.LoadFrom(dllPath);
+            }
+            return null;
+
+        }
 
         private static string GetLibVersion()
         {

@@ -1,18 +1,7 @@
 ﻿using LibTest;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Tekla.Structures.Model;
 
 namespace WpfApp
 {
@@ -24,7 +13,17 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
-            tbMain.Text = new Model().GetTest();
+            tbMain.Text = new ModelTest().GetTest();
+
+            try
+            {
+                var model = new Model().GetProjectInfo();
+            }
+            catch (Exception e)
+            {
+
+            }
+
         }
     }
 }

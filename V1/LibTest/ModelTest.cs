@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LibTest
 {
-    public class Model
+    public class ModelTest
     {
-        public string GetTest() => "Lib V2";
+        public string GetTest() => "Lib V1";
     }
 }

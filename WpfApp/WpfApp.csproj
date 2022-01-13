@@ -51,6 +51,35 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\V1\Tekla.Structures.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tekla.Structures.Catalogs, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\V1\Tekla.Structures.Catalogs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tekla.Structures.Dialog.Data">
+      <HintPath>dll\V1\Tekla.Structures.Dialog.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tekla.Structures.Drawing, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\V1\Tekla.Structures.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\V1\Tekla.Structures.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tekla.Structures.Plugins, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\V1\Tekla.Structures.Plugins.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -111,7 +140,43 @@
     <Content Include="dll\V1\LibTest.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="dll\V1\Tekla.Structures.Catalogs.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V1\Tekla.Structures.Dialog.Data.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V1\Tekla.Structures.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V1\Tekla.Structures.Drawing.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V1\Tekla.Structures.Model.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V1\Tekla.Structures.Plugins.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="dll\V2\LibTest.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V2\Tekla.Structures.Catalogs.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V2\Tekla.Structures.Dialog.Data.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V2\Tekla.Structures.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V2\Tekla.Structures.Drawing.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V2\Tekla.Structures.Model.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\V2\Tekla.Structures.Plugins.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
