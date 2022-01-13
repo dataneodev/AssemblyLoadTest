@@ -11,6 +11,9 @@ namespace WpfApp
     public partial class App : Application
     {
         private static string libVersion = null;
+        private const string DllFolder = "dll";
+
+
         public App()
         {
             if (AppDomain.CurrentDomain.IsDefaultAppDomain())
@@ -22,16 +25,16 @@ namespace WpfApp
         static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
             if (args.Name.StartsWith("ClassLibrary"))
-                return Assembly.LoadFrom(@"dll\ClassLibrary.dll");
+                return Assembly.LoadFrom(Path.Combine(DllFolder, "ClassLibrary.dll"));
 
             if (args.Name.StartsWith("LibTest"))
-                return Assembly.LoadFrom(Path.Combine("dll", GetLibVersion(), "LibTest.dll"));
+                return Assembly.LoadFrom(Path.Combine(DllFolder, GetLibVersion(), "LibTest.dll"));
 
             if (args.Name.StartsWith("Tekla"))
             {
                 string shortName = new AssemblyName(args.Name).Name;
 
-                var dllPath = Path.Combine("dll", GetLibVersion(), $"{shortName}.dll");
+                var dllPath = Path.Combine(DllFolder, GetLibVersion(), $"{shortName}.dll");
                 if (File.Exists(dllPath))
                     return Assembly.LoadFrom(dllPath);
             }
