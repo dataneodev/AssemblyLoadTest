@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:WpfApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="VersionSelect"
-    Width="300"
+    Width="200"
     Height="100"
     Topmost="True"
     WindowStartupLocation="CenterScreen"
