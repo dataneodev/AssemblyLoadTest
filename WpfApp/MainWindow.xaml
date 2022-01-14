@@ -15,7 +15,7 @@
         <TextBlock
             x:Name="tbMain"
             Margin="10"
-            FontSize="22"
+            FontSize="24"
             FontWeight="Black"
             Text="Test" />
     </Grid>
